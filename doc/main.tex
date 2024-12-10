@@ -1,0 +1,52 @@
+\documentclass[a4paper, 12pt, twocolumn]{article}
+
+% Paquetes principales
+\usepackage[utf8]{inputenc}     % Codificación UTF-8
+\usepackage{graphicx}           % Imágenes
+\usepackage{amsmath, amssymb}   % Matemáticas avanzadas
+\usepackage{geometry}           % Control de márgenes
+\usepackage{hyperref}           % Hipervínculos
+\usepackage[sort, numbers]{natbib}    % Citas y bibliografía
+\usepackage{subfiles}           % Para dividir el documento en subarchivos
+\usepackage{lipsum}             % Para generar lorem ipsum
+\usepackage[spanish]{babel}
+\usepackage{listings}
+\usepackage{pdfpages}
+\usepackage{silence}
+\usepackage{csquotes}
+\usepackage[outputdir=aux]{minted}
+\usepackage{dracula-theme}
+
+\geometry{margin=0.5in}           % Márgenes de 1 pulgada
+\graphicspath{ {./images/} }
+
+% Título y autor
+\title{Generación de imágenes con redes neuronales generativas adversarias profundas}
+\author{Rodrigo Dávalos Alarcón}
+\date{\today} % Fecha automática
+
+% Documento
+\begin{document}
+
+\sloppy
+
+\maketitle
+
+\begin{abstract}
+    Este es el resumen de la investigación. Breve descripción de los objetivos, metodología y resultados.
+\end{abstract}
+
+\subfile{chapters/introduccion.tex}
+\subfile{chapters/marco_teorico.tex}
+\subfile{chapters/metodologia.tex}
+\subfile{chapters/implementacion.tex}
+\subfile{chapters/resultados.tex}
+\subfile{chapters/discusion.tex}
+\subfile{chapters/conclusiones.tex}
+
+% Bibliografía
+
+\bibliographystyle{unsrtnat}
+\bibliography{literature/references}
+
+\end{document}

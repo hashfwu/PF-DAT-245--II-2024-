@@ -1,0 +1,129 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+
+\section{Marco teórico}
+
+Se presentan los conceptos fundamentales que que se usarán en el trabajo de investigación, en particular aquellos conceptos relacionados con inteligencia artificiales, redes neuronales convolucionales y los requisitos para la implementación y modificación del código.
+
+\subsection{Antecedentes}
+
+En la investigación A Survey of Convolutional Neural Networks: Analysis, Applications, and Prospects \cite{li2021survey} podemos ver lo que es la evolución de las redes neuronales convolucionales. Estas redes se desarrollaron teóricamente hacer mucho tiempo. Las personas en ese tiempo no creían que fuera posible que una computadora diferencie un gato de un perro. Sin embargo con la evolución de la tecnología estas ideas se volvieron a retomar. El término convolucional viene por primera vez en la red LeNet en 1989. En un principio, luego de lo que fue la primera red neuronal, se empezaron a proponer arquitecturas más complejas que tenían múltiples capas ocultas que por esa época hacian difícil el cálculo para el ajuste de los pesos. Luego, por la década de los 2010 se empezaron a desarrollar nuevas arquitecturas multipropósito, para reconcer objetos, para la segmentación, y detección de imágenes.
+
+No es coincidencia que las redes neuronales convolucionales se usen para las imagenes. Desde el principio se pude hallar una conexión entre ellas y nuestra visión. Cada neurona artificial corresponde a una neurona biológica y cada kérnel que se usa en la convolución es en realidad un receptor diferente que capta una cosa diferente como los colores, los bordes, etc. Las redes convolucionales tiene muchas ventajas, por ejemplo, se necesitan menos neuronas, y estas neuronas pueden compartir el mismo peso. Esto facilita el proceso de entrenamiento ya que no se necesita ajustar muchos parámetros.
+
+Hoy en día usar estas redes es mucho más fácil que años atrás. Se pueden ejecutar en nuestros ordenadores, y si no es así, se pueden ejecutar en la nube. Las redes convolucionales han pasado ya ha trabajar en videos, lo cúal supone un gasto computacional mayor que cuando se trabaja en imágenes, sin embargo, esperamos que en el futuro esta tecnología sea accesible a todos como lo es hoy la tecnología que estudiamos.
+
+\subsection{Conceptos clave}
+
+\subsubsection{Red neuronal}
+
+Una red neuronal es un modelo matemático inspirado en la estructura biológica del cerebro humano, compuesto por neuronas artificiales organizadas en capas. Cada neurona realiza una combinación ponderada de sus entradas, les aplica una función de activación, y pasa el resultado a la siguiente capa. Su objetivo principal es aprender una función \( f: \mathbb{R}^n \to \mathbb{R}^m \), donde \( n \) es el número de características de entrada y \( m \) el número de clases o valores de salida.
+
+La salida de una neurona en la capa \( l \) se define como:
+\[
+z^{(l)}_i = \sum_{j=1}^{n^{(l-1)}} w^{(l)}_{ij} a^{(l-1)}_j + b^{(l)}_i,
+\]
+donde:
+
+\begin{itemize}
+    \item \( w^{(l)}_{ij} \) son los pesos
+    \item \( b^{(l)}_i \) es el sesgo
+    \item \( a^{(l-1)}_j \) es la salida de la neurona \( j \) en la capa anterior
+\end{itemize}
+
+\subsubsection{Convolución}
+
+La convolución es una operación matemática fundamental en las redes neuronales convolucionales (CNN). Consiste en aplicar un filtro (kernel en inglés) a una entrada, como una imagen, para extraer características específicas. Matemáticamente, se define como:
+\[
+s(t) = (x * w)(t) = \int_{-\infty}^\infty x(\tau) w(t-\tau) \, d\tau,
+\]
+donde:
+
+\begin{itemize}
+    \item \( x \) es la entrada
+    \item \( w \) es el filtro
+    \item \( t \) es la posición actual
+\end{itemize}
+
+En el contexto discreto (como las imágenes), se calcula como:
+\[
+s(i, j) = \sum_{m}\sum_{n} x(i+m, j+n) \cdot w(m, n).
+\]
+
+\subsubsection{Función de activación}
+
+Las funciones de activación introducen no linealidades en la red neuronal, permitiendo que la red aprenda relaciones complejas. Ejemplos comunes incluyen:
+
+\begin{itemize}
+    \item \textbf{ReLU (Rectified Linear Unit)}: \( f(x) = \max(0, x) \)
+    \item \textbf{Sigmoide}: \( f(x) = \frac{1}{1 + e^{-x}} \)
+    \item \textbf{Tangente hiperbólica}: \( f(x) = \tanh(x) \)
+\end{itemize}
+
+Estas funciones transforman la salida lineal de una neurona en un valor dentro de un rango específico, como \([0, 1]\) o \([-1, 1]\).
+
+\subsubsection{Tasa de aprendizaje}
+
+La tasa de aprendizaje (\( \eta \)) es un hiperparámetro que controla la magnitud de los ajustes realizados en los pesos de la red durante el entrenamiento. Si es demasiado alta, el modelo puede no converger; si es demasiado baja, el aprendizaje será muy lento. En el descenso de gradiente, la actualización de los pesos se calcula como:
+\[
+w = w - \eta \nabla L(w),
+\]
+donde:
+- \( \nabla L(w) \) es el gradiente del error con respecto a los pesos \( w \).
+
+\subsubsection{Descenso de gradiente}
+
+El descenso de gradiente es un algoritmo de optimización utilizado para minimizar la función de pérdida de un modelo. Se basa en calcular el gradiente de la función de pérdida y ajustar los pesos en la dirección opuesta al gradiente:
+\[
+w^{(t+1)} = w^{(t)} - \eta \nabla L(w^{(t)}),
+\]
+donde \( \eta \) es la tasa de aprendizaje.
+
+Existen variantes como:
+
+\begin{itemize}
+    \item \textbf{Stochastic Gradient Descent (SGD)}: Utiliza un subconjunto aleatorio de datos para calcular el gradiente
+    \item \textbf{Mini-Batch Gradient Descent}: Combina el SGD con pequeños lotes de datos
+\end{itemize}
+
+\subsubsection{TensorFlow}
+
+TensorFlow es una biblioteca de código abierto para el desarrollo y entrenamiento de modelos de aprendizaje automático. Permite implementar operaciones matemáticas en estructuras llamadas tensores. Su diseño basado en grafos computacionales facilita la paralelización y optimización.
+
+\subsubsection{Notación tensorial}
+
+Los tensores son generalizaciones de matrices a dimensiones superiores. En TensorFlow, las operaciones tensoriales se expresan matemáticamente como:
+
+\begin{itemize}
+    \item Vector (\(1\)-dimensional): \( \mathbf{v} \in \mathbb{R}^n \)
+    \item Matriz (\(2\)-dimensional): \( \mathbf{M} \in \mathbb{R}^{m \times n} \)
+    \item Tensor (\(N\)-dimensional): \( \mathcal{T} \in \mathbb{R}^{d_1 \times d_2 \times \ldots \times d_N} \)
+\end{itemize}
+
+\subsubsection{Entrenamiento}
+
+El entrenamiento de un modelo implica ajustar los pesos para minimizar una función de pérdida utilizando un algoritmo de optimización como el descenso de gradiente. Cada iteración incluye:
+
+\begin{enumerate}
+    \item \textbf{Propagación hacia adelante}: Calcular la salida del modelo
+    \item \textbf{Cálculo de la pérdida}: Comparar la predicción con el objetivo
+    \item \textbf{Retropropagación}: Ajustar los pesos usando el gradiente
+\end{enumerate}
+
+\subsubsection{Validación}
+
+La validación es el proceso de evaluar el rendimiento de un modelo en un conjunto de datos separado del entrenamiento. Se utiliza para prevenir el sobreajuste y seleccionar los mejores hiperparámetros. La métrica de validación más común es la precisión, definida como:
+\[
+\text{Precisión} = \frac{\text{Número de predicciones correctas}}{\text{Número total de predicciones}}.
+\]
+
+\subsection{Palabras clave}
+
+\begin{itemize}
+    \item Convolución
+    \item Clásificación de imágenes
+    \item TensorFlow
+    \item Inteligencia Artificial
+\end{itemize}
+
+\end{document}

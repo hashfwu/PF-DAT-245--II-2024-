@@ -1,0 +1,85 @@
+\begin{thebibliography}{13}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Webb et~al.(2010)Webb, Keogh, and Miikkulainen]{webb2010naive}
+Geoffrey~I Webb, Eamonn Keogh, and Risto Miikkulainen.
+\newblock Na{\"\i}ve bayes.
+\newblock \emph{Encyclopedia of machine learning}, 15\penalty0 (1):\penalty0
+  713--714, 2010.
+
+\bibitem[Kayed et~al.(2020)Kayed, Anter, and Mohamed]{kayed2020classification}
+Mohammed Kayed, Ahmed Anter, and Hadeer Mohamed.
+\newblock Classification of garments from fashion mnist dataset using cnn
+  lenet-5 architecture.
+\newblock In \emph{2020 international conference on innovative trends in
+  communication and computer engineering (ITCE)}, pages 238--243. IEEE, 2020.
+
+\bibitem[Swapna et~al.(2020)Swapna, Sharma, and Prasadh]{swapna2020cnn}
+M~Swapna, Yogesh~Kumar Sharma, and BMG Prasadh.
+\newblock Cnn architectures: Alex net, le net, vgg, google net, res net.
+\newblock \emph{Int. J. Recent Technol. Eng}, 8\penalty0 (6):\penalty0
+  953--960, 2020.
+
+\bibitem[Mkkoehler(2020)]{Mkkoehler_2020}
+Mkkoehler.
+\newblock Cnn to identify paintings, December 2020.
+\newblock URL
+  \url{https://www.kaggle.com/code/mkkoehler/cnn-to-identify-paintings/notebook}.
+
+\bibitem[Li et~al.(2021)Li, Liu, Yang, Peng, and Zhou]{li2021survey}
+Zewen Li, Fan Liu, Wenjie Yang, Shouheng Peng, and Jun Zhou.
+\newblock A survey of convolutional neural networks: analysis, applications,
+  and prospects.
+\newblock \emph{IEEE transactions on neural networks and learning systems},
+  33\penalty0 (12):\penalty0 6999--7019, 2021.
+
+\bibitem[Bes(2019)]{BestArtworksofAllTime2019}
+Best artworks of all time, March 2019.
+\newblock URL
+  \url{https://www.kaggle.com/datasets/ikarus777/best-artworks-of-all-time}.
+
+\bibitem[Krizhevsky et~al.(2012)Krizhevsky, Sutskever, and
+  Hinton]{krizhevsky2012imagenet}
+Alex Krizhevsky, Ilya Sutskever, and Geoffrey~E Hinton.
+\newblock Imagenet classification with deep convolutional neural networks.
+\newblock \emph{Advances in neural information processing systems}, 25, 2012.
+
+\bibitem[Alom et~al.(2018)Alom, Taha, Yakopcic, Westberg, Sidike, Nasrin,
+  Van~Esesn, Awwal, and Asari]{alom2018history}
+Md~Zahangir Alom, Tarek~M Taha, Christopher Yakopcic, Stefan Westberg, Paheding
+  Sidike, Mst~Shamima Nasrin, Brian~C Van~Esesn, Abdul A~S Awwal, and Vijayan~K
+  Asari.
+\newblock The history began from alexnet: A comprehensive survey on deep
+  learning approaches.
+\newblock \emph{arXiv preprint arXiv:1803.01164}, 2018.
+
+\bibitem[Yann~LeCun and Burges()]{MNIST}
+Corinna~Cortes Yann~LeCun and Chris Burges.
+\newblock Handwritten digit database.
+\newblock URL \url{https://yann.lecun.com/exdb/mnist/}.
+
+\bibitem[Wei and Hou(2023)]{wei2023binary}
+Jinxin Wei and Zhe Hou.
+\newblock Binary encoding for label.
+\newblock \emph{Authorea Preprints}, 2023.
+
+\bibitem[Radiuk(2017)]{radiuk2017impact}
+Pavlo~M Radiuk.
+\newblock Impact of training set batch size on the performance of convolutional
+  neural networks for diverse datasets.
+\newblock 2017.
+
+\bibitem[Team()]{keras_rmsprop}
+Keras Team.
+\newblock Keras documentation: Rmsprop.
+\newblock URL \url{https://keras.io/api/optimizers/rmsprop/}.
+
+\bibitem[cus()]{customizing_fit}
+URL
+  \url{https://www.tensorflow.org/guide/keras/customizing_what_happens_in_fit}.
+
+\end{thebibliography}

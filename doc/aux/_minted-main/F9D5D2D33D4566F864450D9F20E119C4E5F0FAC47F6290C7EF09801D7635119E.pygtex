@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{loss} \PYG{o}{=} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{keras}\PYG{o}{.}\PYG{n}{losses}\PYG{o}{.}
+ \PYG{o}{.}\PYG{n}{SparseCategoricalCrossentropy}
+  \PYG{p}{(}\PYG{n}{from\PYGZus{}logits}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)}
+\end{Verbatim}

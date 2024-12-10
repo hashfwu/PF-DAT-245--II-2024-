@@ -1,0 +1,31 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{gruvboxtheme}[2024/12/09 Gruvbox Theme]
+\RequirePackage{xcolor}
+
+% Paleta de colores Gruvbox (Light por defecto)
+\definecolor{gruvboxbg}       {HTML} {fbf1c7} % Fondo
+\definecolor{gruvboxfg}       {HTML} {3c3836} % Fuente
+\definecolor{gruvboxred}      {HTML} {cc241d}
+\definecolor{gruvboxgreen}    {HTML} {98971a}
+\definecolor{gruvboxyellow}   {HTML} {d79921}
+\definecolor{gruvboxblue}     {HTML} {458588}
+\definecolor{gruvboxpurple}   {HTML} {b16286}
+\definecolor{gruvboxaqua}     {HTML} {689d6a}
+\definecolor{gruvboxgray}     {HTML} {7c6f64}
+\definecolor{gruvboxorange}   {HTML} {d65d0e}
+
+% Definir colores por defecto (modo light)
+\pagecolor{gruvboxbg}
+\color{gruvboxfg}
+
+% Opción para el modo oscuro
+\DeclareOption{dark}{
+    \renewcommand{\color}[2][]{}
+    \definecolor{gruvboxbg}       {HTML} {282828} % Fondo
+    \definecolor{gruvboxfg}       {HTML} {ebdbb2} % Fuente
+    \definecolor{gruvboxgray}     {HTML} {a89984}
+    \pagecolor{gruvboxbg}
+    \color{gruvboxfg}
+}
+
+\ProcessOptions\relax

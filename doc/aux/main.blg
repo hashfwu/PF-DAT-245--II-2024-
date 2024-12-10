@@ -1,0 +1,52 @@
+This is BibTeX, Version 0.99d (TeX Live 2022/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+The style file: unsrtnat.bst
+Database file #1: literature/references.bib
+Warning--I didn't find a database entry for "making_new_layer"
+Warning--empty year in MNIST
+Warning--empty journal in radiuk2017impact
+Warning--empty year in keras_rmsprop
+Warning--empty year in customizing_fit
+You've used 13 entries,
+            2481 wiz_defined-function locations,
+            626 strings with 6645 characters,
+and the built_in function-call counts, 4467 in all, are:
+= -- 361
+> -- 225
+< -- 6
++ -- 92
+- -- 66
+* -- 325
+:= -- 691
+add.period$ -- 37
+call.type$ -- 13
+change.case$ -- 25
+chr.to.int$ -- 13
+cite$ -- 19
+duplicate$ -- 230
+empty$ -- 434
+format.name$ -- 81
+if$ -- 954
+int.to.chr$ -- 1
+int.to.str$ -- 14
+missing$ -- 8
+newline$ -- 70
+num.names$ -- 33
+pop$ -- 130
+preamble$ -- 1
+purify$ -- 13
+quote$ -- 0
+skip$ -- 161
+stack$ -- 0
+substring$ -- 141
+swap$ -- 37
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 91
+warning$ -- 4
+while$ -- 31
+width$ -- 0
+write$ -- 159
+(There were 5 warnings)
